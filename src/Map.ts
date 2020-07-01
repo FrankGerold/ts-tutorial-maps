@@ -19,11 +19,19 @@ export class Map {
   }
 
   addMarker(mapItem: Mappable): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mapItem.location.lat,
         lng: mapItem.location.lng
+    });
+
+    marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: 'Ayyyyy'
+      });
+
+      infoWindow.open(this.googleMap, marker)
     });
   };
 }
