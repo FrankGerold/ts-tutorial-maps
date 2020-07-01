@@ -14,3 +14,5 @@ console.log(comp);
 
 const customMap = new Map(mapElementClass);
 console.log(customMap);
+
+customMap.addUserMarker(user);
