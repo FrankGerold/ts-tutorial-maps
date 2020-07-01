@@ -10,11 +10,17 @@ export class Company {
 
 
   constructor() {
-    this.companyName = faker.company.companyName();
+    this.name = faker.company.companyName();
     this.catchPhrase = faker.company.catchPhrase();
     this.location = {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude())
     };
+  };
+
+  markerContent(): string {
+    return `<h1>Company: ${this.name}</h1>
+    <h2>${this.catchPhrase}</h2>
+    <h3>Location: ${this.location.lat}, ${this.location.lng}</h3>`
   };
 };
