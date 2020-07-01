@@ -16,3 +16,4 @@ const customMap = new Map(mapElementClass);
 console.log(customMap);
 
 customMap.addUserMarker(user);
+customMap.addCompanyMarker(comp);
