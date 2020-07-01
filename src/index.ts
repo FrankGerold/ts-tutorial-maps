@@ -9,3 +9,11 @@ console.log(user);
 
 const comp = new Company();
 console.log(comp);
+
+new google.maps.Map(document.getElementsByClassName('map')[0], {
+  zoom: 1,
+  center: {
+    lat: 0,
+    lng: 0
+  }
+});
